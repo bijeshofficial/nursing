@@ -24,7 +24,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "vercel/wsgi.py"
+            "dest": "nursing/wsgi.py"
         }
     ]
 }
