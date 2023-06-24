@@ -20,6 +20,10 @@ def job_seeker(request):
             form.save()
             return render(request,'website/job_seeker.html',{'form':form})
     return render(request,'website/job_seeker.html',{'form':form})
+
+
+def contact(request):
+    return render(request, 'website/contact.html')
     
 
 
