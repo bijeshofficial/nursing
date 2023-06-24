@@ -15,8 +15,10 @@ def service(request):
 def job_seeker(request):
     form = JobSeekerForm()
     if request.method == 'POST':
-        form = JobSeekerForm(request.POST)
+        form = JobSeekerForm(request.POST,request.FILES)
+        print(form.errors)
         if form.is_valid():
+            print("it was here")
             form.save()
             return render(request,'website/job_seeker.html',{'form':form})
     return render(request,'website/job_seeker.html',{'form':form})
