@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 from .forms import JobSeekerForm
+from .models import Contact
 
 def index(request):
     return render(request,'website/index.html')
@@ -23,6 +24,19 @@ def job_seeker(request):
 
 
 def contact(request):
+    return render(request, 'website/contact.html')
+
+def save_contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone_number = request.POST.get('phone')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+        
+        form_data = Contact(name=name,email=email,phone_number=phone_number,subject=subject,message=message)
+        form_data.save()
+        
     return render(request, 'website/contact.html')
     
 
