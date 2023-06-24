@@ -9,4 +9,4 @@ def index(request):
         "job_seeker": job_seeker,
         "name":"rupesh"
     }
-    return render(request, 'administrator/index.html',context)
+    return render(request, 'administrator/admin_index.html',context)
