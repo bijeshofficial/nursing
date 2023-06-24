@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from dj_database_url import parse as db_url
+from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +27,7 @@ SECRET_KEY = 'k5t(6)f6-__-bbb714sf01$$vhc122x)c7w%z%9r(0n0&)g!s3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1']
 
 
 # Application definition
@@ -77,13 +79,32 @@ WSGI_APPLICATION = 'nursing.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+dbname = config('NAME')
+dbpassword = config('PASSWORD')
+dbhost = config('HOST')
+dbport = config('PORT')
+dbuser = config('USERNAME')
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': dbname,
+        'USER': dbuser,
+        'PASSWORD': dbpassword,
+        'HOST': dbhost,
+        'PORT': dbport,
     }
 }
 
+
+# DATABASES['default'] = dj_database_url.config()
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -125,7 +146,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
