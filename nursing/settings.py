@@ -27,7 +27,7 @@ SECRET_KEY = 'k5t(6)f6-__-bbb714sf01$$vhc122x)c7w%z%9r(0n0&)g!s3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1',"localhost"]
 
 
 # Application definition
@@ -79,29 +79,29 @@ WSGI_APPLICATION = 'nursing.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
-dbname = config('NAME')
-dbpassword = config('PASSWORD')
-dbhost = config('HOST')
-dbport = config('PORT')
-dbuser = config('USERNAME')
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': dbname,
-        'USER': dbuser,
-        'PASSWORD': dbpassword,
-        'HOST': dbhost,
-        'PORT': dbport,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# dbname = config('NAME')
+# dbpassword = config('PASSWORD')
+# dbhost = config('HOST')
+# dbport = config('PORT')
+# dbuser = config('USERNAME')
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': dbname,
+#         'USER': dbuser,
+#         'PASSWORD': dbpassword,
+#         'HOST': dbhost,
+#         'PORT': dbport,
+#     }
+# }
 
 
 # DATABASES['default'] = dj_database_url.config()

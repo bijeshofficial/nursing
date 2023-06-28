@@ -1,4 +1,6 @@
 from django.db import models
+from datetime import datetime
+
 
 class Qualification(models.Model):
     name = models.CharField(max_length=60)
@@ -27,6 +29,7 @@ class JobSeeker(models.Model):
     address = models.CharField(max_length=60)
     cv = models.FileField(upload_to="cv_pdf")
     qualification_pdf = models.FileField(upload_to="qualification_pdf")
+    created = models.DateTimeField(auto_now_add = True)
 
 
     def __str__(self):
@@ -39,8 +42,31 @@ class Contact(models.Model):
     phone_number = models.PositiveBigIntegerField()
     subject = models.CharField(max_length=200)
     message = models.TextField()
-    created = models.DateField(auto_now_add=True)
+    created = models.DateTimeField(auto_now_add = True)
     
     
     def __str__(self) -> str:
         return f"{self.name} -> {self.subject}"
+
+
+
+
+class Vacancy(models.Model):
+    job_title = models.CharField(max_length=50)
+    job_title = models.CharField(max_length=100)
+    proposed_commencement_Date = models.DateField()
+    attachment_position_description = models.FileField(upload_to="vacancy_attachment")
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+    contact = models.PositiveBigIntegerField()
+    additional_info = models.TextField()
+    created = models.DateTimeField(auto_now_add = True)
+
+    
+
+
+    def __str__(self) -> str:
+        return f"{self.job_title} -> {self.job_title}"
+
+
+
