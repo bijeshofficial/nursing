@@ -79,29 +79,29 @@ WSGI_APPLICATION = 'nursing.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
-# dbname = config('NAME')
-# dbpassword = config('PASSWORD')
-# dbhost = config('HOST')
-# dbport = config('PORT')
-# dbuser = config('USERNAME')
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': dbname,
-#         'USER': dbuser,
-#         'PASSWORD': dbpassword,
-#         'HOST': dbhost,
-#         'PORT': dbport,
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
+dbname = config('NAME')
+dbpassword = config('PASSWORD')
+dbhost = config('HOST')
+dbport = config('PORT')
+dbuser = config('USERNAME')
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': dbname,
+        'USER': dbuser,
+        'PASSWORD': dbpassword,
+        'HOST': dbhost,
+        'PORT': dbport,
+    }
+}
 
 
 # DATABASES['default'] = dj_database_url.config()
