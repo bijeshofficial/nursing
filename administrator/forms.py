@@ -18,3 +18,5 @@ class PositionForm(ModelForm):
         fields = [
             'name'
                     ]
+
+
