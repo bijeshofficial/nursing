@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from .views import index, about, service, job_seeker, contact, save_contact
+from .views import index, about, service, job_seeker, contact, save_contact,vacancy
 urlpatterns = [
     path('',index,name="index"),
     # path('home',index, name="home"),
@@ -8,7 +8,8 @@ urlpatterns = [
     path('service/',service,name="service"),
     path('job-seeker/',job_seeker,name="job-seeker"),
     path('contact', contact, name = "contact-us"),
-    path('save-contact', save_contact, name="save-contact")
+    path('save-contact', save_contact, name="save-contact"),
+     path('vacancy', vacancy, name="vacancy")
     
 
 

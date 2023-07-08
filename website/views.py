@@ -1,7 +1,8 @@
 from django.shortcuts import render
 
-from .forms import JobSeekerForm
+from .forms import JobSeekerForm,VacancyForm
 from .models import Contact
+
 
 def index(request):
     return render(request,'website/index.html')
@@ -16,11 +17,24 @@ def service(request):
 def job_seeker(request):
     form = JobSeekerForm()
     if request.method == 'POST':
-        form = JobSeekerForm(request.POST)
+        form = JobSeekerForm(request.POST,request.FILES)
+        print(form.errors)
         if form.is_valid():
+            print("it was here")
             form.save()
             return render(request,'website/job_seeker.html',{'form':form})
     return render(request,'website/job_seeker.html',{'form':form})
+
+
+def vacancy(request):
+    form = VacancyForm()
+    if request.method == 'POST':
+        form = VacancyForm(request.POST,request.FILES)
+        print(form.errors)
+        if form.is_valid():
+            form.save()
+            return render(request,'website/vacancy.html',{'form':form})
+    return render(request,'website/vacancy.html',{'form':form})
 
 
 def contact(request):

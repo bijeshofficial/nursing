@@ -76,7 +76,10 @@
      <!-- Navbar Start -->
      <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
         <a href="{% url 'index' %}" class="navbar-brand p-0">
-            <h1 class="m-0 text-primary"><i class="fa fa-user-nurse"></i> White Care Nursing</h1>
+            {% comment %} <h1 class="m-0 text-primary">
+            <i class="fa fa-user-nurse"> 
+            </i> White Care Nursing</h1> {% endcomment %}
+            <img src="{% static 'img/white-Logo.png'%}" alt="logo" class="img-fluid"/>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -97,7 +100,7 @@
                 <a href="{% url 'about-us' %}" class="nav-item nav-link">Find Jobs</a>
                 <a href="{% url 'contact-us' %}" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">Submit Vacancy</a>
+            <a href="{% url 'vacancy' %}" class="btn btn-primary py-2 px-4 ms-3">Submit Vacancy</a>
             <a href="{% url 'job-seeker' %}" class="btn btn-primary py-2 px-4 ms-3">Submit Resume</a>
         </div>
     </nav>
