@@ -76,7 +76,10 @@
      <!-- Navbar Start -->
      <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
         <a href="{% url 'index' %}" class="navbar-brand p-0">
-            <h1 class="m-0 text-primary"><i class="fa fa-user-nurse"></i> White Care Nursing</h1>
+            {% comment %} <h1 class="m-0 text-primary">
+            <i class="fa fa-user-nurse"> 
+            </i> White Care Nursing</h1> {% endcomment %}
+            <img src="{% static 'img/white-Logo.png'%}" alt="logo" class="img-fluid"/>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
