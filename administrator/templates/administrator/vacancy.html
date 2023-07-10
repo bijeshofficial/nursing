@@ -1,0 +1,76 @@
+{% extends 'administrator/base.html' %}
+
+
+
+{% block content %}
+<section class="section">
+    <!-- <a href="{% url 'qualification-create' %}">
+      <button type="button" class="btn btn-primary">
+        Add Qualification
+      </button> -->
+      
+    </a>
+
+
+
+
+
+
+
+
+    <div class="col-12">
+        <div class="card recent-sales overflow-auto">
+
+          <div class="card-body">
+            <h5 class="card-title">Recent Job Seekers<span>|
+             
+    
+            
+            </span></h5>
+           
+
+            <table class="table table-borderless datatable">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Qualification #</th>
+                  <th data-sortable="false" scope="col">phone number</th>
+                  <th scope="col">work experience</th>
+                  <th scope="col">current police check</th>
+                  <th scope="col">children check</th>
+                  <th data-sortable="false" scope="col">address</th>
+                  <th data-sortable="false" scope="col">CV</th>
+                  <th data-sortable="false" scope="col">qualification_pdf</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for job in seekers %}
+                <tr>
+                  <th scope="row"><a href="#">#{{job.id}}</a></th>
+                  <td>{{job.first_name}}</td>
+                  <td><a href="#" class="text-primary">{{job.last_name}}</a></td>
+                  <td>{{job.qualification_id}}</td>
+                  <td><span class="badge bg-success">{{job.phone_number}}</span></td>
+                  <td>{{job.work_experience}}</td>
+                  <td>{{job.current_police_check}}</td>
+                  <td>{{job.children_check}}</td>
+                  <td>{{job.address}}</td>
+                  <td>{{job.cv.url}}</td>
+                  <td>{{job.qualification_pdf.url}}</td>
+                </tr>
+                {% endfor %}
+               
+
+              </tbody>
+            </table>
+
+          </div>
+
+        </div>
+      </div>
+  </section>
+
+
+{% endblock content %}

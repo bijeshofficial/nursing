@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from website.models import JobSeeker,Qualification,Position
+from website.models import JobSeeker,Qualification,Position,Contact,Service
 from .forms import PositionForm,QualificationForm
 from django.shortcuts import redirect
 
@@ -21,7 +21,34 @@ def qualification_dashboard(request):
 
     return render(request, 'administrator/qualification.html',context)
 
+def contact_listing(request): 
+    contacts = Contact.objects.all()
+    context = {
+        "contacts":contacts
+    }
 
+    return render(request, 'administrator/contact.html',context)
+
+
+
+def pages(request): 
+    pages = Service.objects.all()
+    print(pages)
+    context = {
+        "pages":pages
+    }
+
+    return render(request, 'administrator/pages.html',context)
+
+
+
+def seeker(request): 
+    seekers = JobSeeker.objects.all()
+    context = {
+        "seekers":seekers
+    }
+
+    return render(request, 'administrator/seeker.html',context)
 
 def create_position(request): 
     form = PositionForm()

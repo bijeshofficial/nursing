@@ -1,0 +1,114 @@
+[
+    {
+        "model": "website.point",
+        "fields": {
+            "name": "Taking care of medication",
+            "service":3
+        }
+    },
+    {
+        "model": "website.point",    
+        "fields": {
+            "name": "Monitoring patients recovery",
+            "service":3
+        }
+    },
+    {
+        "model": "website.point",
+        "fields": {
+            "name": "Caring for wounds and injuries",
+            "service":3
+        }
+    },
+    {
+        "model": "website.point",  
+        "fields": {
+            "name": "Aid in personal hygiene",
+            "service":3
+        }
+
+    },
+    {
+        "model": "website.point",
+        "fields": {
+            "name": "Assistance in other daily living activities",
+            "service":3
+        }
+
+    },
+
+    
+
+    
+
+    {
+        "model": "website.point",  
+        "fields": {
+            "name": "Assistance with personal hygiene (showering, dressing)",
+            "service":4
+        }
+
+    },
+
+    {
+        "model": "website.point",  
+        "fields": {
+            "name": "Assistance with daily activities (cooking, eating)",
+            "service":4
+        }
+
+    },
+
+    {
+        "model": "website.point",  
+        "fields": {
+            "name": "Helping take medications",
+            "service":4
+        }
+
+    },
+
+
+
+
+
+
+    {
+        "model": "website.point",  
+        "fields": {
+            "name": "Assisting with daily life activities",
+            "service":5
+        }
+
+    },
+    {
+        "model": "website.point",  
+        "fields": {
+            "name": "Assisting with personal hygiene",
+            "service":5
+        }
+
+    },
+    {
+        "model": "website.point",  
+        "fields": {
+            "name": "Provide emotional support",
+            "service":5
+        }
+
+    },
+    {
+        "model": "website.point",  
+        "fields": {
+            "name": "Aid with medications",
+            "service":5
+        }
+
+    }
+
+
+
+
+
+    
+]

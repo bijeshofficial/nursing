@@ -46,7 +46,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="{% url 'admin_index' %}" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">Nursing Admin</span>
       </a>
@@ -298,7 +298,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link" href="{% url 'admin_index' %}">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -312,7 +312,7 @@
       
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="users-profile.html">
+        <a class="nav-link collapsed" href="{% url 'seeker' %}">
           <i class="bi bi-person"></i>
           <span>Seeker</span>
         </a>
@@ -333,10 +333,19 @@
         </a>
       </li>
 
+
       <li class="nav-item">
         <a class="nav-link collapsed" href="{% url 'position-dashboard' %}">
           <i class="bi bi-person"></i>
           <span>Position</span>
+        </a>
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'contact-list' %}">
+          <i class="bi bi-person"></i>
+          <span>Contacts</span>
         </a>
       </li>
 
