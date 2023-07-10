@@ -1,7 +1,9 @@
 from django.shortcuts import render
 
 from .forms import JobSeekerForm,VacancyForm
-from .models import Contact
+from .models import Contact,Service
+from django.shortcuts import get_object_or_404
+
 
 
 def index(request):
@@ -14,6 +16,16 @@ def about(request):
 def service(request):
     return render(request,'website/service.html')
 
+
+def homecare(request):
+    home_care = Service.objects.get(title="Home Care")
+    points = home_care.points.all()
+    context = {
+        "home_care": home_care,
+        "points": points
+    }
+    return render(request,'website/homecare.html',context)
+
 def job_seeker(request):
     form = JobSeekerForm()
     if request.method == 'POST':
@@ -24,6 +36,39 @@ def job_seeker(request):
             form.save()
             return render(request,'website/job_seeker.html',{'form':form})
     return render(request,'website/job_seeker.html',{'form':form})
+
+def training(request):
+    home_care = get_object_or_404(Service,title="Training")
+
+    points = home_care.points.all()
+    context = {
+        "home_care": home_care,
+        "points": points
+    }
+    return render(request,'website/training.html',context)
+
+
+
+def aged_care(request):
+    home_care = get_object_or_404(Service,title="Aged Care")
+
+    points = home_care.points.all()
+    context = {
+        "home_care": home_care,
+        "points": points
+    }
+    return render(request,'website/aged_care.html',context)
+
+
+def disability_support(request):
+    home_care = get_object_or_404(Service,title="Disability Support")
+
+    points = home_care.points.all()
+    context = {
+        "home_care": home_care,
+        "points": points
+    }
+    return render(request,'website/disability_support.html',context)
 
 
 def vacancy(request):

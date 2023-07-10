@@ -49,6 +49,30 @@ class Contact(models.Model):
         return f"{self.name} -> {self.subject}"
 
 
+class Service(models.Model):
+    title = models.CharField(max_length=200,unique=True)
+    sub_content = models.TextField(null=True,blank=True)
+    main_content = models.TextField(null=True, blank=True)
+    image = models.FileField(upload_to="homecare",null=True,blank=True)
+
+
+
+    def __str__(self) -> str:
+        return f"{self.title}"
+
+
+
+
+class Point(models.Model): 
+    service = models.ForeignKey(Service,on_delete=models.SET_NULL,null=True,related_name='points')
+    name = models.CharField(max_length=100)
+
+
+
+    def __str__(self) -> str:
+        return f"{self.name}"
+
+
 
 
 class Vacancy(models.Model):

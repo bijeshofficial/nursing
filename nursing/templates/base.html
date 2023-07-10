@@ -91,10 +91,10 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                     <div class="dropdown-menu m-0">
-                        <a href="price.html" class="dropdown-item">Aged Care</a>
-                        <a href="team.html" class="dropdown-item">Home Care</a>
-                        <a href="testimonial.html" class="dropdown-item">Disability Support</a>
-                        <a href="appointment.html" class="dropdown-item">Training</a>
+                        <a href="{% url 'aged-care' %}" class="dropdown-item">Aged Care</a>
+                        <a href="{% url 'home-care' %}" class="dropdown-item">Home Care</a>
+                        <a href="{% url 'disability-support' %}" class="dropdown-item">Disability Support</a>
+                        <a href="{% url 'training' %}" class="dropdown-item">Training</a>
                     </div>
                 </div>
                 <a href="{% url 'about-us' %}" class="nav-item nav-link">Find Jobs</a>
