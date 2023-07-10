@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from website.models import JobSeeker,Qualification,Position,Contact
+from website.models import JobSeeker,Qualification,Position,Contact,Service
 from .forms import PositionForm,QualificationForm
 from django.shortcuts import redirect
 
@@ -28,6 +28,17 @@ def contact_listing(request):
     }
 
     return render(request, 'administrator/contact.html',context)
+
+
+
+def pages(request): 
+    pages = Service.objects.all()
+    print(pages)
+    context = {
+        "pages":pages
+    }
+
+    return render(request, 'administrator/pages.html',context)
 
 
 

@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from .views import index, qualification_dashboard,create_qualification,update_qualification,delete_qualification,position_dashboard,create_position,update_position,delete_position,contact_listing,seeker
+from .views import index, qualification_dashboard,create_qualification,update_qualification,delete_qualification,position_dashboard,create_position,update_position,delete_position,contact_listing,seeker,pages
 urlpatterns = [
     path('',index,name="admin_index"),
      path('qualification-dashboard/',qualification_dashboard,name="qualification-dashboard"),
@@ -20,6 +20,7 @@ urlpatterns = [
 
         path('contact-list/',contact_listing,name="contact-list"),
 
+        path('pages/',pages,name="pages"),
 
 
         path('seekers/',seeker,name="seeker"),
