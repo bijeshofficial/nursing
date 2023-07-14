@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime
+from ckeditor.fields import RichTextField
 
 
 class Qualification(models.Model):
@@ -91,6 +92,16 @@ class Vacancy(models.Model):
 
     def __str__(self) -> str:
         return f"{self.job_title} -> {self.job_title}"
+        
+
+
+
+
+class JobPost(models.Model):
+    title = models.CharField(max_length=200,blank=True,null=True)
+    content = RichTextField()
+    
+    
 
 
 

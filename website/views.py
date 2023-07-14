@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from .forms import JobSeekerForm,VacancyForm
-from .models import Contact,Service
+from .models import Contact,Service,JobPost
 from django.shortcuts import get_object_or_404
 
 
@@ -58,6 +58,23 @@ def aged_care(request):
         "points": points
     }
     return render(request,'website/aged_care.html',context)
+
+
+
+def find_jobs(request):
+    listed_jobs = JobPost.objects.all()
+    context = {
+        "jobs":listed_jobs
+    }
+    return render(request,'website/find_job.html',context)
+
+def job_detail(request,pk):
+    job = get_object_or_404(JobPost,pk=pk)
+    print(job.content)
+    context = {
+        "job":job
+    }
+    return render(request,'website/job_detail.html',context)
 
 
 def disability_support(request):
