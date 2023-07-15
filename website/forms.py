@@ -1,6 +1,8 @@
 from django.forms import ModelForm 
 from .models import JobSeeker,Vacancy,JobPost
 from django import forms
+
+
 class JobSeekerForm(ModelForm):
     class Meta:
         model = JobSeeker
@@ -19,17 +21,17 @@ class JobSeekerForm(ModelForm):
 
 
 class VacancyForm(ModelForm):
+
+
     class Meta:
         model = Vacancy
-        fields = [
-            'job_title',
-            'proposed_commencement_Date',
-            'attachment_position_description',
-            'name',
-            'email',
-            'contact',
-            'additional_info',
-                    ]
+
+        proposed_commencement_Date = forms.DateField(widget=forms.TextInput(attrs={'class': 'form-control', 'type':'date'}))
+
+        fields = '__all__'
+
+
+        
 
 
 

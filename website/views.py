@@ -7,7 +7,12 @@ from django.shortcuts import get_object_or_404
 
 
 def index(request):
-    return render(request,'website/index.html')
+    page_info = Service.objects.all()
+    print(page_info)
+    content = {
+        "page_info" :page_info
+    }
+    return render(request,'website/index.html',content)
 
 def about(request):
     return render(request,'website/about.html')
