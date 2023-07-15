@@ -4,18 +4,17 @@
         "pk": 1,
         "fields": {
             "title": "About Us",
-            "sub_content":"White Care Nursing was started in (year) with one aim; to provide quality nursing assistance to people in Australia. We, at White Care Nursing, are dedicated to providing highly diverse and important health care and nursing assistance throughout the cities in Australia for individuals, families and also organizations. We want our services to help our clients live independent and easy lives. Our main focus has been to connect qualified nursing professionals to the people who are seeking such services.",
-            "main_content":"We value every single person seeking assistance through us and we ensure that you are getting exactly what you want and more through the help of our qualified and experienced workers. Our nurses are extremely qualified and can easily understand and meet your health needs. White Care believes in providing quality and hence has focused on providing the nurses with required training to make them capable of performing their duties in every situation."
+            "sub_content": "White Care Nursing was started in (year) with one aim; to provide quality nursing assistance to people in Australia. We, at White Care Nursing, are dedicated to providing highly diverse and important health care and nursing assistance throughout the cities in Australia for individuals, families and also organizations. We want our services to help our clients live independent and easy lives. Our main focus has been to connect qualified nursing professionals to the people who are seeking such services.",
+            "main_content": "We value every single person seeking assistance through us and we ensure that you are getting exactly what you want and more through the help of our qualified and experienced workers. Our nurses are extremely qualified and can easily understand and meet your health needs. White Care believes in providing quality and hence has focused on providing the nurses with required training to make them capable of performing their duties in every situation."
         }
-
     },
     {
         "model": "website.service",
         "pk": 2,
         "fields": {
             "title": "Training",
-            "sub_content":"White Care Nursing is equally focused on improving the nursing assistance scenario by introducing our training courses. Our training courses are really effective because they are perfectly researched and planned to provide the most necessary skills to make our nurses competent in their jobs. These courses can help our nurses gain important skills for their career growth and make our nurses capable enough to work any job in any situation. This also ensures our clients that they are getting the best services.",
-            "main_content":"We also provide paid training courses where aspiring nurses can gain knowledge about all the important skills for furthering their careers."
+            "sub_content": "White Care Nursing is equally focused on improving the nursing assistance scenario by introducing our training courses. Our training courses are really effective because they are perfectly researched and planned to provide the most necessary skills to make our nurses competent in their jobs. These courses can help our nurses gain important skills for their career growth and make our nurses capable enough to work any job in any situation. This also ensures our clients that they are getting the best services.",
+            "main_content": "We also provide paid training courses where aspiring nurses can gain knowledge about all the important skills for furthering their careers."
         }
     },
     {
@@ -23,8 +22,8 @@
         "pk": 3,
         "fields": {
             "title": "Home Care",
-            "sub_content":"Our homecare services are designed to help patients and make it easy for them to receive professional care from the comfort of their homes. The services our nurses provide have a wide range and cater to every patient's needs.",
-            "main_content":"Our nurses are skilled and patient so along with providing these services, they also additionally develop plans for patients' fast recovery and communicate with the family and health care institutions about current situations and future proceedings for the better care of patients. The nurses being empathetic helps a lot while providing home care assistance to patients as they feel comfortable taking such services."
+            "sub_content": "Our homecare services are designed to help patients and make it easy for them to receive professional care from the comfort of their homes. The services our nurses provide have a wide range and cater to every patient's needs.",
+            "main_content": "Our nurses are skilled and patient so along with providing these services, they also additionally develop plans for patients' fast recovery and communicate with the family and health care institutions about current situations and future proceedings for the better care of patients. The nurses being empathetic helps a lot while providing home care assistance to patients as they feel comfortable taking such services."
         }
     },
     {
@@ -32,18 +31,17 @@
         "pk": 4,
         "fields": {
             "title": "Disability Support",
-            "sub_content":"Our disability support services are meant to help people with disabilities with their daily living. Our main focus remains on making the patients as much independent as they can be and helping them lead a normal life.",
-            "main_content":"Our nurses are very skilled at their jobs and also have an empathetic nature which makes the surroundings around the patients very comfortable. Patients can also freely ask for assistance in such an environment. This encourages and empowers our patients and their families to lead a normal life."
+            "sub_content": "Our disability support services are meant to help people with disabilities with their daily living. Our main focus remains on making the patients as much independent as they can be and helping them lead a normal life.",
+            "main_content": "Our nurses are very skilled at their jobs and also have an empathetic nature which makes the surroundings around the patients very comfortable. Patients can also freely ask for assistance in such an environment. This encourages and empowers our patients and their families to lead a normal life."
         }
     },
-
     {
         "model": "website.service",
         "pk": 5,
         "fields": {
             "title": "Aged Care",
-            "sub_content":"Our aged care services are targeted towards older people who need assistance in their daily living because of their constrained physical activities. Our nurses help people in all the aspects of their lives which is harder for them to perform by themselves.",
-            "main_content":"Our nurses are especially trained to take into account the needs of aged people and serve them properly, all while making them comfortable to ask for help and also giving them emotional support by patiently listening and replying to them."
+            "sub_content": "Our aged care services are targeted towards older people who need assistance in their daily living because of their constrained physical activities. Our nurses help people in all the aspects of their lives which is harder for them to perform by themselves.",
+            "main_content": "Our nurses are especially trained to take into account the needs of aged people and serve them properly, all while making them comfortable to ask for help and also giving them emotional support by patiently listening and replying to them."
         }
     }
-    ]
+]
