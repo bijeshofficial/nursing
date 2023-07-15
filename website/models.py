@@ -71,7 +71,7 @@ class Point(models.Model):
 
 
     def __str__(self) -> str:
-        return f"{self.name}"
+        return f"{self.service.title} - {self.name}"
 
 
 
@@ -102,6 +102,11 @@ class JobPost(models.Model):
     location = models.CharField(max_length=200,blank=True,null=True)
     deadline = models.DateTimeField(blank=True,null=True)
     content = RichTextField()
+
+
+
+    def __str__(self) -> str:
+        return f"{self.title}"
     
     
 
