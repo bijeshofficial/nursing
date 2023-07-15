@@ -150,7 +150,10 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+if config('ENVTYPE') == 'dev':
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
