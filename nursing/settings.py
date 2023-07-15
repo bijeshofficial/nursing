@@ -96,17 +96,28 @@ dbhost = config('HOST')
 dbport = config('PORT')
 dbuser = config('USERNAME')
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': dbname,
-        'USER': dbuser,
-        'PASSWORD': dbpassword,
-        'HOST': dbhost,
-        'PORT': dbport,
+if config('ENVTYPE') == 'dev':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': dbname,
+            'USER': dbuser,
+            'PASSWORD': dbpassword,
+            'HOST': dbhost,
+            'PORT': dbport,
+        }
     }
-}
-
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': dbname,
+            'USER': dbuser,
+            'PASSWORD': dbpassword,
+            'HOST':dbhost,
+            'PORT':dbport, #3306
+        }
+    }
 
 # DATABASES['default'] = dj_database_url.config()
 
