@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from website.models import JobSeeker,Qualification,Position,Contact,Service,JobPost
+from website.models import JobSeeker,Qualification,Position,Contact,Service,JobPost,Vacancy
 from .forms import PositionForm,QualificationForm,JobPostForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
@@ -9,9 +9,12 @@ from django.contrib.auth import authenticate, login, logout
 @login_required
 def index(request):
     job_seeker = JobSeeker.objects.all()
+    contacts = Contact.objects.all()
+    vacancy = Vacancy.objects.all()
     context ={
         "job_seeker": job_seeker,
-        "name":"rupesh"
+        "contacts":contacts,
+        "vacancy":vacancy
     }
     return render(request, 'administrator/admin_index.html',context)
 
@@ -198,8 +201,6 @@ def create_job(request):
 def listing_jobs(request):
     listed_jobs = JobPost.objects.all()
 
-
-    print(listed_jobs[0].id)
     context = {
         'listed_jobs' : listed_jobs
     }

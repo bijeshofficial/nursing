@@ -71,14 +71,14 @@ class Point(models.Model):
 
 
     def __str__(self) -> str:
-        return f"{self.name}"
+        return f"{self.service.title} - {self.name}"
 
 
 
 
 class Vacancy(models.Model):
-    job_title = models.CharField(max_length=50)
-    job_title = models.CharField(max_length=100)
+    role_title = models.CharField(max_length=100,null=True,blank=True)
+    job_title = models.CharField(max_length=100,null=True,blank=True)
     proposed_commencement_Date = models.DateField()
     attachment_position_description = models.FileField(upload_to="vacancy_attachment")
     name = models.CharField(max_length=50)
@@ -99,7 +99,14 @@ class Vacancy(models.Model):
 
 class JobPost(models.Model):
     title = models.CharField(max_length=200,blank=True,null=True)
+    location = models.CharField(max_length=200,blank=True,null=True)
+    deadline = models.DateTimeField(blank=True,null=True)
     content = RichTextField()
+
+
+
+    def __str__(self) -> str:
+        return f"{self.title}"
     
     
 
