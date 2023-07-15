@@ -3,13 +3,7 @@
 
 
 {% block content %}
-<section class="section">
-    <a href="{% url 'qualification-create' %}">
-      <button type="button" class="btn btn-primary">
-        Add Qualification
-      </button>
-      
-    </a>
+
 
 
 
@@ -19,6 +13,16 @@
 
 
     <div class="row">
+
+      <a href="{% url 'qualification-create' %}" class="m-10">
+        <button type="button" class="btn btn-primary">
+          Add Qualification
+        </button>
+        
+      </a>
+      <section class="section">
+          
+      
       <div class="col-lg-12 justify-content-between">
    
         <div class="card">

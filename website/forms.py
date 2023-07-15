@@ -1,7 +1,6 @@
 from django.forms import ModelForm 
-from .models import JobSeeker,Vacancy
-
-
+from .models import JobSeeker,Vacancy,JobPost
+from django import forms
 class JobSeekerForm(ModelForm):
     class Meta:
         model = JobSeeker
@@ -20,8 +19,6 @@ class JobSeekerForm(ModelForm):
 
 
 class VacancyForm(ModelForm):
-
-
     class Meta:
         model = Vacancy
         fields = [
@@ -33,3 +30,10 @@ class VacancyForm(ModelForm):
             'contact',
             'additional_info',
                     ]
+
+
+
+
+
+
+
