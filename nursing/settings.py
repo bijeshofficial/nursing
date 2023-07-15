@@ -30,7 +30,7 @@ if config('ENVTYPE') == 'dev':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', "localhost"]
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', "localhost", 'bijeshnp.pythonanywhere.com']
 
 
 # Application definition
