@@ -15,7 +15,13 @@ def index(request):
     return render(request,'website/index.html',content)
 
 def about(request):
-    return render(request,'website/about.html')
+    about_us = Service.objects.get(title="About Us")
+    points = about_us.points.all()
+    context = {
+        "about_us": about_us,
+        "points": points
+    }
+    return render(request,'website/about.html', context)
 
 
 def service(request):
