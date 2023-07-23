@@ -17,8 +17,5 @@ urlpatterns = [
     path('find-jobs', find_jobs, name="find-jobs"),
     path('job/<int:pk>/', job_detail, name="job-detail")
 
-    
-    
-
 
 ]
