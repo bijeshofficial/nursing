@@ -8,7 +8,7 @@ from django.shortcuts import get_object_or_404
 
 def index(request):
     page_info = Service.objects.all()
-    print(page_info)
+    # print(page_info)
     content = {
         "page_info" :page_info
     }
@@ -41,9 +41,9 @@ def job_seeker(request):
     form = JobSeekerForm()
     if request.method == 'POST':
         form = JobSeekerForm(request.POST,request.FILES)
-        print(form.errors)
+        # print(form.errors)
         if form.is_valid():
-            print("it was here")
+            # print("it was here")
             form.save()
             return render(request,'website/job_seeker.html',{'form':form})
     return render(request,'website/job_seeker.html',{'form':form})
@@ -81,7 +81,7 @@ def find_jobs(request):
 
 def job_detail(request,pk):
     job = get_object_or_404(JobPost,pk=pk)
-    print(job.content)
+    # print(job.content)
     context = {
         "job":job
     }
@@ -103,7 +103,7 @@ def vacancy(request):
     form = VacancyForm()
     if request.method == 'POST':
         form = VacancyForm(request.POST,request.FILES)
-        print(form.errors)
+        # print(form.errors)
         if form.is_valid():
             form.save()
             return render(request,'website/vacancy.html',{'form':form})
