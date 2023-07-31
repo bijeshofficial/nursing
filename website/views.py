@@ -113,6 +113,7 @@ def vacancy(request):
 def contact(request):
     return render(request, 'website/contact.html')
 
+
 def save_contact(request):
     if request.method == 'POST':
         name = request.POST.get('name')
@@ -125,6 +126,10 @@ def save_contact(request):
         form_data.save()
         
     return render(request, 'website/contact.html')
+
+
+def privacy_policy(request):
+    return render(request, 'website/privacy_policy.html')
     
 
 
