@@ -25,9 +25,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'k5t(6)f6-__-bbb714sf01$$vhc122x)c7w%z%9r(0n0&)g!s3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if config('ENVTYPE') == 'dev':
+    DEBUG = True
+else:
+    DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', "localhost"]
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', "localhost", 'bijeshnp.pythonanywhere.com', 'www.whitecarenursing.com.au']
 
 
 # Application definition
@@ -93,17 +96,28 @@ dbhost = config('HOST')
 dbport = config('PORT')
 dbuser = config('USERNAME')
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': dbname,
-        'USER': dbuser,
-        'PASSWORD': dbpassword,
-        'HOST': dbhost,
-        'PORT': dbport,
+if config('ENVTYPE') == 'dev':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': dbname,
+            'USER': dbuser,
+            'PASSWORD': dbpassword,
+            'HOST': dbhost,
+            'PORT': dbport,
+        }
     }
-}
-
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': dbname,
+            'USER': dbuser,
+            'PASSWORD': dbpassword,
+            'HOST':dbhost,
+            'PORT':dbport, #3306
+        }
+    }
 
 # DATABASES['default'] = dj_database_url.config()
 
@@ -149,7 +163,9 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+# if config('ENVTYPE') == 'dev':
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 

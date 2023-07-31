@@ -17,18 +17,19 @@
                 </p>
                 <div class="row g-6">
                     <div class="col-sm-6 wow zoomIn" data-wow-delay="0.3s">
-                        <!-- <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Award Winning</h5>
-                        <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Professional Staff</h5>
-                        <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Professional Staff</h5> -->
-
-                        {%for point in points%}
-                    
-                        <h5 class="mb-3 text-left"><i class="fa fa-check-circle text-primary me-3"></i>{{point.name}}</h5>
-                  
-                    {% endfor %}
-
-
-                    </div>
+                        {%for point in points|slice:":2"%}
+                        
+                            <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>{{point.name}}</h5>
+                      
+                        {% endfor %}
+                        </div>
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.3s">
+                        {%for point in points|slice:"2:"%}
+                        
+                            <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>{{point.name}}</h5>
+                      
+                        {% endfor %}
+                        </div>
                     <!-- <div class="col-sm-6 wow zoomIn" data-wow-delay="0.6s">
                         <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>24/7 Opened</h5>
                         <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Fair Prices</h5>
