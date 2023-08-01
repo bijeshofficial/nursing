@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from .forms import JobSeekerForm,VacancyForm
-from .models import Contact,Service,JobPost
+from .models import Contact,Service,JobPost,TimeSheet
 from django.shortcuts import get_object_or_404
 
 
@@ -57,6 +57,16 @@ def training(request):
         "points": points
     }
     return render(request,'website/training.html',context)
+
+def time_sheet(request):
+    timesheet = TimeSheet.objects.all()[0]
+    context = {
+        "timesheet":timesheet,
+    }
+    print(timesheet)
+    return render(request,'website/timesheet.html',context)
+
+
 
 
 

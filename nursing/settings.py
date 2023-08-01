@@ -46,14 +46,18 @@ INSTALLED_APPS = [
     'crispy_forms',
     "crispy_bootstrap5",
     "administrator",
-    'ckeditor'
+    'ckeditor',
+    'django_cleanup.apps.CleanupConfig',
+
 ]
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+        'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -139,6 +143,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', "localhost"]
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
