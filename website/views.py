@@ -58,15 +58,14 @@ def training(request):
     }
     return render(request,'website/training.html',context)
 
+
 def time_sheet(request):
-    timesheet = TimeSheet.objects.all()[0]
+    timesheet = TimeSheet.objects.first()
     context = {
         "timesheet":timesheet,
     }
-    print(timesheet)
+    # print(timesheet)
     return render(request,'website/timesheet.html',context) 
-
-
 
 
 
