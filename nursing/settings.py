@@ -143,9 +143,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', "localhost"]
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
