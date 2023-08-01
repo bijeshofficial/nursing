@@ -46,7 +46,9 @@ INSTALLED_APPS = [
     'crispy_forms',
     "crispy_bootstrap5",
     "administrator",
-    'ckeditor'
+    'ckeditor',
+    'django_cleanup.apps.CleanupConfig',
+
 ]
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
