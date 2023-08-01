@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import datetime
 from ckeditor.fields import RichTextField
+from django.core.validators import FileExtensionValidator
 
 
 class Qualification(models.Model):
@@ -107,7 +108,16 @@ class JobPost(models.Model):
 
     def __str__(self) -> str:
         return f"{self.title}"
-    
+
+
+class TimeSheet(models.Model):
+    pdf = models.FileField(upload_to="timesheet",validators=[FileExtensionValidator( ['pdf'])])
+
+    def save(self, *args, **kwargs):
+        if not self.pk:
+           TimeSheet.objects.all().delete()
+        super(TimeSheet, self).save(*args, **kwargs)
+        
     
 
 
