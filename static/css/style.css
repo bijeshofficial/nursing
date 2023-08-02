@@ -345,3 +345,23 @@ h6 {
         max-height: 700px;
     }
 }
+
+.two-column-list {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style: none;
+    padding: 0;
+}
+
+.two-column-list li {
+    position: relative;
+    padding-left: 20px;
+    /* Adjust the spacing between icon and text */
+    margin-bottom: 5px;
+    /* Adjust the vertical spacing between items */
+}
+
+.stretch-image {
+    height: 100%;
+}
