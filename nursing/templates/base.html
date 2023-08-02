@@ -94,7 +94,7 @@
                 <a href="{% url 'index' %}" class="nav-item nav-link">Home</a>
                 <a href="{% url 'about-us' %}" class="nav-item nav-link">About Us</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                    <a href="{% url 'service' %}" class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a>
                     <div class="dropdown-menu m-0">
                         <a href="{% url 'aged-care' %}" class="dropdown-item">Aged Care</a>
                         <a href="{% url 'home-care' %}" class="dropdown-item">Home Care Service</a>
@@ -152,7 +152,7 @@
                         <a class="text-light mb-2" href="{% url 'privacy-policy' %}"><i class="bi bi-arrow-right text-primary me-2"></i>Privacy Policy</a>
                         <a class="text-light mb-2" href="{% url 'privacy-policy' %}"><i class="bi bi-arrow-right text-primary me-2"></i>Terms and Condition</a>
                         <a class="text-light mb-2" href="{% url 'time-sheet' %}"><i class="bi bi-arrow-right text-primary me-2"></i>Time Sheet</a>
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Education and Learning</a>
+                        {% comment %} <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Education and Learning</a> {% endcomment %}
                         {% comment %} <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a> {% endcomment %}
                     </div>
                 </div>
