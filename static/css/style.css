@@ -1,4 +1,8 @@
 /********** Template CSS **********/
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 :root {
     --primary: #06A3DA;
     --secondary: #F57E57;
@@ -22,6 +26,15 @@ h5,
 h6,
 .font-weight-medium {
     font-weight: 500 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn {
