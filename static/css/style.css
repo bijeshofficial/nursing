@@ -1,6 +1,11 @@
 /********** Template CSS **********/
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
+    line-height: 32px;
+}
+
+p {
+    text-align: justify;
 }
 
 :root {
@@ -34,7 +39,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
 }
 
 .btn {
