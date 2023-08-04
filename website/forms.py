@@ -20,6 +20,12 @@ class JobSeekerForm(ModelForm):
                         'qualification_pdf']
 
 
+        labels = {
+            'qualification_id': 'Qualification',
+            'position_id': 'Position'
+        }
+
+
 class VacancyForm(ModelForm):
 
 
