@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "crispy_bootstrap5",
     "administrator",
     'ckeditor',
+    'django.contrib.sitemaps',
     # 'django_cleanup.apps.CleanupConfig',
 
 ]
