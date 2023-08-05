@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'website',
     'crispy_forms',
     "crispy_bootstrap5",
-    "administrator",
     'ckeditor',
     'django.contrib.sitemaps',
     # 'django_cleanup.apps.CleanupConfig',

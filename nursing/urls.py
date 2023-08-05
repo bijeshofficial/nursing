@@ -23,7 +23,7 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('white-care-wcn-admin/', admin.site.urls),
     path('',include('website.urls')),
-    path('white-care-wcn-auth/',include('administrator.urls')),
+    # path('white-care-wcn-auth/',include('administrator.urls')),
     path('robots.txt', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
     
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
