@@ -7,5 +7,3 @@ User-agent: *
 Allow: /
 Disallow: /white-care-wcn-admin/
 Disallow: /white-care-wcn-auth/
-
-Sitemap: https://www.example.com/sitemap.xml
