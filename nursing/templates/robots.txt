@@ -7,3 +7,5 @@ User-agent: *
 Allow: /
 Disallow: /white-care-wcn-admin/
 Disallow: /white-care-wcn-auth/
+
+Sitemap: https://www.whitecarenursing.com.au/sitemap.xml
